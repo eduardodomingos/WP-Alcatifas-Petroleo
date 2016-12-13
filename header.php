@@ -20,30 +20,42 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ap' ); ?></a>
+<header id="top" class="tm-header">
+	<div class="uk-block tm-block-tiny tm-block-light uk-hidden-small">
+		<div class="uk-container uk-container-center">
+			<div class="uk-flex uk-flex-space-between uk-flex-middle">
+				<div>
+					<a href="tel:+351<?php echo str_replace(' ', '', get_field('phone', 'option')) ?>" class="uk-link-muted uk-margin-large-right"><i class="uk-icon-phone"></i> <?php the_field( 'phone', 'option' ); ?></a>
+					<i class="uk-icon-clock-o"></i> <?php the_field( 'working_hours', 'option' ); ?>
+				</div>
+				<div class="uk-contrast">
+					<?php
+					// check if the repeater field has rows of data
+					if( have_rows('social', 'option') ):
+						// loop through the rows of data
+						while ( have_rows('social', 'option') ) : the_row();
+							echo '<a href="'. get_sub_field('url') .'" class="uk-icon-button '. get_sub_field('icon_class') .' uk-margin-right"></a>';
+						endwhile;
+					endif;
+					?>
+					<a href="#" class="uk-icon-button uk-icon-search" data-uk-offcanvas="{target:'#offcanvas-search'}"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav class="uk-navbar" data-uk-sticky="{showup: true, animation: 'uk-animation-slide-top'}">
+		<div class="uk-container uk-container-center">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="uk-navbar-brand" rel="home">
+				<img class="uk-responsive-height" src="<?php echo get_template_directory_uri() . '/assets/build/img/logo.png' ?>" alt="<?php bloginfo( 'name' ); ?> logo">
+			</a>
+			<div class="uk-navbar-flip uk-visible-large">
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container'=> false, 'menu_id' => 'primary-menu', 'menu_class' => 'uk-navbar-nav tm-navbar' ) ); ?>
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ap' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+			</div>
+			<div class="uk-navbar-flip uk-hidden-large">
+				<a class="uk-navbar-toggle" href="#offcanvas" data-uk-offcanvas></a>
+			</div>
+		</div>
+	</nav>
+</header>
