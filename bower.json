@@ -1,0 +1,14 @@
+{
+  "name": "ap",
+  "description": "Theme developed for Alcatifas Petroleo",
+  "main": "frontpage.php",
+  "authors": [
+    "Eduardo Domingos"
+  ],
+  "license": "ISC",
+  "homepage": "http://www.alcatifaspetroleo.pt",
+  "dependencies": {
+    "uikit": "^2.27.2",
+    "gmap3": "^7.2.0"
+  }
+}

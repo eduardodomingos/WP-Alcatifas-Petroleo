@@ -1,0 +1,36 @@
+.tm-button-hollow {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    &:hover,
+    &:active {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+.tm-button-ghost {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    &:hover,
+    &:active {
+        background-color: #fff;
+    }
+}
+
+.tm-button-ghost-primary {
+    border-color: @ui-primary;
+    color: @ui-primary;
+    &:hover,
+    &:active {
+        color: @ui-primary-hover;
+        border-color: @ui-primary-hover;
+        background-color: transparent;
+    }
+}
+
+.hook-button() {
+    font-family: 'Raleway', sans-serif;
+    border-radius: @global-radius;
+    text-transform: uppercase;
+    font-weight: 700;
+}

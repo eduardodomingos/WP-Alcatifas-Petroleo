@@ -1,0 +1,7 @@
+{
+	"default": [
+		"copy",
+		"less",
+		"watch"
+	]
+}
