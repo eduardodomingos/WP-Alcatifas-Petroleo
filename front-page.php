@@ -14,6 +14,14 @@
 
 get_header(); ?>
 
+
+<?php
+
+// Homepage widgets
+dynamic_sidebar('ap-homepage-sections');
+
+?>
+
 <?php
 get_footer();
 
