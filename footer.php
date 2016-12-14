@@ -58,6 +58,20 @@
     <p class="tm-sr-only">Theme developed by <a href="http://www.eduardodomingos.com/" rel="designer">Eduardo Domingos</a>.</p>
 </footer>
 
+<div id="offcanvas" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
+        <div class="uk-panel uk-text-center">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="uk-display-block" rel="home">
+                <img src="<?php echo get_template_directory_uri() . '/assets/build/img/logo-offcanvas.png' ?>" class="uk-responsive-height" alt="<?php bloginfo( 'name' ); ?> logo">
+            </a>
+        </div>
+        <form class="uk-search" data-uk-search>
+            <input class="uk-search-field" type="search" placeholder="Pesquisar">
+        </form>
+        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container'=> false, 'menu_id' => 'primary-menu', 'menu_class' => 'uk-nav uk-nav-offcanvas' ) ); ?>
+    </div>
+</div>
+
 <?php wp_footer(); ?>
 
 </body>
