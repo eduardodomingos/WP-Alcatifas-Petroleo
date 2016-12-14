@@ -1,4 +1,12 @@
 module.exports = {
+	js_vendors: {
+		expand: true,
+		flatten: true,
+		src: [
+			'bower_components/uikit/js/uikit.js'
+		],
+		dest: 'assets/src/js/vendors/'
+	},
 	picturefill: {
 		expand: true,
 		flatten: true,
