@@ -30,9 +30,7 @@
 				</div>
 				<div class="uk-contrast">
 					<?php
-					// check if the repeater field has rows of data
 					if( have_rows('social', 'option') ):
-						// loop through the rows of data
 						while ( have_rows('social', 'option') ) : the_row();
 							echo '<a href="'. get_sub_field('url') .'" class="uk-icon-button '. get_sub_field('icon_class') .' uk-margin-right"></a>';
 						endwhile;
@@ -49,9 +47,7 @@
 				<img class="uk-responsive-height" src="<?php echo get_template_directory_uri() . '/assets/build/img/logo.png' ?>" alt="<?php bloginfo( 'name' ); ?> logo">
 			</a>
 			<div class="uk-navbar-flip uk-visible-large">
-
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container'=> false, 'menu_id' => 'primary-menu', 'menu_class' => 'uk-navbar-nav tm-navbar' ) ); ?>
-
 			</div>
 			<div class="uk-navbar-flip uk-hidden-large">
 				<a class="uk-navbar-toggle" href="#offcanvas" data-uk-offcanvas></a>
