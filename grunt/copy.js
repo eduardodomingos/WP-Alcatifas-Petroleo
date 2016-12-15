@@ -3,7 +3,8 @@ module.exports = {
 		expand: true,
 		flatten: true,
 		src: [
-			'bower_components/uikit/js/uikit.js'
+			'bower_components/uikit/js/uikit.js',
+			'bower_components/uikit/js/components/slideshow.js'
 		],
 		dest: 'assets/src/js/vendors/'
 	},

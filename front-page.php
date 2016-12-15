@@ -16,6 +16,7 @@ get_header(); ?>
 
 
 <?php
+ap_get_headlines();
 
 // Homepage widgets
 dynamic_sidebar('ap-homepage-sections');
