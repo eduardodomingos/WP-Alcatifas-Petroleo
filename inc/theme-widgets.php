@@ -42,7 +42,18 @@ class Ap_intro extends WP_Widget {
         $title = $instance['title'];
         $text = empty( $instance['text'] ) ? '' : $instance['text'];
         echo $args['before_widget'];
-        $markup = '';
+        $markup = '<div class="uk-block uk-block-default uk-block-large tm-intro">';
+        $markup.= '<div class="uk-container uk-container-center">';
+        $markup.= '<div class="uk-grid uk-grid-large" data-uk-grid-margin>';
+        $markup.= '<div class="uk-width-large-1-3">';
+        $markup.= '<h2 class="tm-intro__title">'. $title . '</h2>';
+        $markup.= '</div>';
+        $markup.= '<div class="uk-width-large-2-3">';
+        $markup.= '<p>'. $text .'</p>';
+        $markup.= '</div>';
+        $markup.= '</div>';
+        $markup.= '</div>';
+        $markup.= '</div>';
         echo $markup;
         echo $args['after_widget'];
     }
