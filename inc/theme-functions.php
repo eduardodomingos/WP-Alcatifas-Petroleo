@@ -17,6 +17,13 @@ function ap_get_headlines(){
     ap_get_template_part('template-parts/home', 'headlines', array('headlines' => $headlines));
 }
 
+function ap_get_portfolio(){
+    $home_id = ap_get_active_homepage();
+    $portfolio = get_field('portfolio', $home_id);
+    ap_get_template_part('template-parts/home', 'portfolio', array('portfolio' => $portfolio));
+}
+
+
 function ap_get_active_homepage(){
     $home_active_id = 0;
     //arguments to find the
