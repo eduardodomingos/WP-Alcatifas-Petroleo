@@ -20,8 +20,7 @@ get_header(); ?>
 			<li><a href="index.html">Início</a></li>
 			<li class="uk-active uk-text-capitalize"><span><?php the_title(); ?></span></li>
 		</ul>
-
-
+		
 		<div class="tm-map uk-margin-large-bottom"></div>
 		<?php
 		$latitude = get_field( 'latitude', 'option' );
@@ -75,31 +74,8 @@ get_header(); ?>
 				</form>
 			</div>
 		</div>
-
-
-
-
 	</div>
 </div>
-
-
-<div class="uk-block tm-block-light">
-	<div class="uk-container uk-container-center">
-		<div class="uk-grid uk-grid-large uk-grid-width-large-1-4" data-uk-grid-margin>
-			<?php
-			if( have_rows('panel') ):
-				while ( have_rows('panel') ) : the_row(); ?>
-					<div class="uk-panel uk-text-center">
-						<i class="<?php the_sub_field('icon_class');?> uk-icon-medium uk-margin-bottom"></i>
-						<h3 class="uk-panel-title"><?php the_sub_field('title'); ?></h3>
-						<p><?php the_sub_field('text'); ?></p>
-					</div>
-				<?php endwhile;
-			endif; ?>
-		</div>
-	</div>
-</div>
-
 <?php
 
 get_footer();
