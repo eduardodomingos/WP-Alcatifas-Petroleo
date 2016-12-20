@@ -10,6 +10,18 @@
  */
 
 ?>
+<div class="uk-block tm-block-small tm-block-dark tm-banner">
+    <div class="uk-container uk-container-center">
+        <div class="uk-grid uk-flex uk-flex-middle" data-uk-grid-margin>
+            <div class="uk-width-large-2-3">
+                <p class="tm-banner__text">Peça-nos um orçamento, <span>respondemos em 48h</span></p>
+            </div>
+            <div class="uk-width-large-1-3 uk-text-center">
+                <a href="#ask-quote-modal" class="uk-button uk-button-large uk-button-primary" data-uk-modal="{center:true}">Pedir orçamento</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <footer class="tm-footer">
     <div class="uk-block uk-block-secondary uk-contrast">
