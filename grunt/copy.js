@@ -3,6 +3,7 @@ module.exports = {
 		expand: true,
 		flatten: true,
 		src: [
+			'bower_components/gmap3/dist/gmap3.js',
 			'bower_components/uikit/js/uikit.js',
 			'bower_components/uikit/js/components/slideshow.js',
 			'bower_components/uikit/js/components/sticky.js'
