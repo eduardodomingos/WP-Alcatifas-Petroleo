@@ -29,7 +29,7 @@ get_header(); ?>
 					?>
 					<div>
 						<figure class="uk-overlay uk-overlay-hover">
-							<img class="uk-border-rounded" src="<?php echo $first_photo['sizes']['medium'] ?>" alt="<?php echo $first_photo['alt'] ?>">
+							<img class="uk-border-rounded" src="<?php echo $first_photo['url'] ?>" alt="<?php echo $first_photo['alt'] ?>">
 							<figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
 								<div>
 									<h3><?php the_title(); ?></h3>
