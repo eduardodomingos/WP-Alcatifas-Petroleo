@@ -52,26 +52,7 @@ get_header(); ?>
 			</div>
 			<div class="uk-width-medium-1-2">
 				<h2>Deixe-nos a sua mensagem</h2>
-				<form class="uk-form" action="">
-					<div class="uk-grid" data-uk-grid-margin="">
-						<div class="uk-width-medium-1-2">
-							<input class="uk-width-1-1" type="text" placeholder="O seu nome">
-						</div>
-						<div class="uk-width-medium-1-2">
-							<input class="uk-width-1-1" type="text" placeholder="O seu email">
-						</div>
-					</div>
-					<div class="uk-grid">
-						<div class="uk-width-1-1">
-							<textarea class="uk-width-1-1" name="" id="" cols="30" rows="10" placeholder="A sua mensagem"></textarea>
-						</div>
-					</div>
-					<div class="uk-grid">
-						<div class="uk-width-1-1">
-							<button type="button" class="uk-button uk-button-primary uk-button-large">Enviar</button>
-						</div>
-					</div>
-				</form>
+				<?php echo do_shortcode('[contact-form-7 id="129" title="Contact form 2" html_class="uk-form"]');?>
 			</div>
 		</div>
 	</div>

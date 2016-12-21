@@ -84,6 +84,21 @@
     </div>
 </div>
 
+<div id="offcanvas-search" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
+        <form class="uk-search" data-uk-search>
+            <input class="uk-search-field" type="search" placeholder="Pesquisar">
+        </form>
+    </div>
+</div>
+
+<div id="ask-quote-modal" class="uk-modal">
+    <div class="uk-modal-dialog">
+        <a class="uk-modal-close uk-close uk-margin-bottom"></a>
+        <?php echo do_shortcode('[contact-form-7 id="128" title="Contact form 1" html_class="uk-form uk-margin"]');?>
+    </div>
+</div>
+
 <?php wp_footer(); ?>
 
 </body>
