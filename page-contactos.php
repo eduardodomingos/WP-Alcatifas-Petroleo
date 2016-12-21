@@ -16,8 +16,8 @@ get_header(); ?>
 
 <div class="uk-block uk-block-default uk-padding-top-remove">
 	<div class="uk-container uk-container-center">
-		<ul class="uk-breadcrumb uk-margin-top uk-margin-bottom-remove">
-			<li><a href="index.html">Início</a></li>
+		<ul class="uk-breadcrumb uk-margin-top">
+			<li><a href="/">Início</a></li>
 			<li class="uk-active uk-text-capitalize"><span><?php the_title(); ?></span></li>
 		</ul>
 		

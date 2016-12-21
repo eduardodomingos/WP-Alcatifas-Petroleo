@@ -17,7 +17,7 @@ get_header(); ?>
 	<div class="uk-block uk-block-default uk-padding-top-remove">
 		<div class="uk-container uk-container-center">
 			<ul class="uk-breadcrumb uk-margin-top uk-margin-bottom">
-				<li><a href="index.html">Início</a></li>
+				<li><a href="/">Início</a></li>
 				<li class="uk-active"><span>Portfolio</span></li>
 			</ul>
 			<div class="uk-grid uk-grid-width-medium-1-3" data-uk-grid-margin>

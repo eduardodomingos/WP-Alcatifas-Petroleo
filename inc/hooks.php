@@ -23,3 +23,27 @@ function add_slug_body_class( $classes ) {
     return $classes;
 }
 add_filter( 'body_class', 'add_slug_body_class' );
+
+
+
+
+function wpsites_nav_class($classes, $item)
+{
+
+    if (is_archive() && $item->title == "Catálogo") {
+
+        $classes[] = "uk-active";
+    }
+
+    elseif (is_single() && 'portfolio' == get_post_type() && $item->title == "Portfolio") {
+        $classes[] = "uk-active";
+    }
+
+    elseif (is_single() && 'post' == get_post_type() && $item->title == "Catálogo") {
+        $classes[] = "uk-active";
+    }
+
+    return $classes;
+}
+
+add_filter('nav_menu_css_class' , 'wpsites_nav_class' , 10 , 2);

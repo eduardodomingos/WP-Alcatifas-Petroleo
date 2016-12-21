@@ -17,7 +17,7 @@ get_header(); ?>
 <div class="uk-block uk-block-default uk-padding-top-remove">
 	<div class="uk-container uk-container-center">
 		<ul class="uk-breadcrumb uk-margin-top uk-margin-bottom-remove">
-			<li><a href="index.html">Início</a></li>
+			<li><a href="/">Início</a></li>
 			<li class="uk-active uk-text-capitalize"><span><?php the_title(); ?></span></li>
 		</ul>
 		<?php if( get_field('page_title') ): ?>

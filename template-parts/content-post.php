@@ -8,11 +8,11 @@
  */
 
 ?>
-
+<?php $category = get_the_category(); ?>
 <ul class="uk-breadcrumb uk-margin-top uk-margin-bottom-remove">
-    <li><a href="index.html">Início</a></li>
-    <li><a href="catalog.html">Catálogo</a></li>
-    <li><a href="category.html">Alcatifas Industriais</a></li>
+    <li><a href="/">Início</a></li>
+    <li><a href="/catalogo">Catálogo</a></li>
+    <li><a href="/catalogo/<?php echo $category[0]->slug . '/' . $category[1]->slug?>"><?php echo  $category[0]->name . ' ' . $category[1]->name ?></a></li>
 </ul>
 
 <?php the_title( '<h1 class="uk-margin-large-bottom">', '</h1>' ); ?>

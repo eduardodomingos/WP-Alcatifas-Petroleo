@@ -105,7 +105,7 @@ class Ap_portfolio extends WP_Widget {
 
         $markup='</div>';
         $markup.='<div class="uk-text-center uk-margin-large-top">';
-        $markup.='<a href="portfolio.html" class="uk-button uk-button-large tm-button-ghost tm-button-ghost-primary">Ver mais projetos</a>';
+        $markup.='<a href="/portfolio" class="uk-button uk-button-large tm-button-ghost tm-button-ghost-primary">Ver mais projetos</a>';
         $markup.='</div>';
         $markup.='</div>';
         $markup.='</div>';
