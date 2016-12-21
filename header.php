@@ -32,7 +32,7 @@
 					<?php
 					if( have_rows('social', 'option') ):
 						while ( have_rows('social', 'option') ) : the_row();
-							echo '<a href="'. get_sub_field('url') .'" class="uk-icon-button '. get_sub_field('icon_class') .' uk-margin-right"></a>';
+							echo '<a href="'. get_sub_field('url') .'" class="uk-icon-button '. get_sub_field('icon_class') .' uk-margin-right" target="_blank"></a>';
 						endwhile;
 					endif;
 					?>
