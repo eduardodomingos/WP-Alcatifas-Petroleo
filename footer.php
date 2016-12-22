@@ -86,9 +86,7 @@
 
 <div id="offcanvas-search" class="uk-offcanvas">
     <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
-        <form class="uk-search" data-uk-search>
-            <input class="uk-search-field" type="search" placeholder="Pesquisar">
-        </form>
+        <?php get_search_form(); ?>
     </div>
 </div>
 
