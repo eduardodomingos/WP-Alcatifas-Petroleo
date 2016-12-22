@@ -9,19 +9,13 @@
 
 get_header(); ?>
 
-	<div class="uk-block uk-block-default uk-padding-top-remove">
-		<div class="uk-container uk-container-center">
-
-			<?php
-			while ( have_posts() ) : the_post();
-
-				get_template_part( 'template-parts/content', 'portfolio' );
-
-			endwhile; // End of the loop.
-			?>
-
-		</div>
-	</div>
-
 <?php
+while ( have_posts() ) : the_post();
+
+	get_template_part( 'template-parts/content', 'portfolio' );
+
+endwhile; // End of the loop.
+?>
+<?php
+
 get_footer();
